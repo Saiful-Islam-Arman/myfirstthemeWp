@@ -202,6 +202,31 @@ h1,h2,h3,h4,h5,h6{
  
 }
 
+/* Pagination area style */
+#page_nav{
+    text-align: center;
+}
+#page_nav p.pages{
+    padding: 10px;
+    background: #ea1a70;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 4px;
+}
+.page-numbers{
+    text-decoration: none;
+    color: #fff;
+    background-color: #ea1a70;
+    font-size: 17px;
+    padding: 10px 12px;
+    font-weight: bold;
+    margin: 0 8px;
+}
+.page-numbers.current, .page-numbers:hover{
+    background-color: #262626;
+}
+
 /* Read more button style */
 .excerpt_more{
     text-decoration: none;

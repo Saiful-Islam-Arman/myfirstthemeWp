@@ -31,10 +31,9 @@ function saiful_pagenav(){
     $total = 1;
     $args['prev_text'] = 'Prev';
     $args['next_text'] = 'Next';
-    if($max > 1) echo '<pre>
+    if($max > 1) echo '</pre>
         <div class="wp_pagenav">';
-            if($total == 1 && $max > 1) $pages = '<p class="pages">Page' . $current . '<span>of</span>' . $max . '</p>';
-            echo $pages . pagenate_link($args);
-            if($max > 1) echo ' </div></pre>';
+            if($total == 1 && $max > 1) $pages = '<p class="pages">Page' .' '. $current . '<span> of </span>'  . $max . '</p>';
+            echo $pages . paginate_links( $args );
+            if($max > 1) echo ' </div><pre>';
 }
-// changed
