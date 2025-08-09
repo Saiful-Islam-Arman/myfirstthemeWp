@@ -37,3 +37,4 @@ function saiful_pagenav(){
             echo $pages . pagenate_link($args);
             if($max > 1) echo ' </div></pre>';
 }
+// changed
