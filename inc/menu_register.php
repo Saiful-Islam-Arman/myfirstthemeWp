@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Menu register
+ */
+register_nav_menu( 'primary_menu', __('Primary Menu', 'saifulislamarman') );
+
+// Walker menu properties
+function saiful_nav_description($item_output, $item, $args){
+   if (!empty($item->description)) {
+      $item_output = str_replace(
+         '</a>', 
+         '<span class="walker_nav">' . $item->description . '</span></a>',
+         $item_output
+      );
+   }
+   return $item_output;
+}
+add_filter('walker_nav_menu_start_el', 'saiful_nav_description', 10, 3);

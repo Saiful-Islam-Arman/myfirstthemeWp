@@ -1,0 +1,25 @@
+<?php
+
+ // Theme CSS & jQuery file calling
+ function saiful_css_js_file_calling(){
+    wp_enqueue_style('saiful-style', get_stylesheet_uri());
+    wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css', array(), '5.3.7', 'all');
+    wp_register_style('custom', get_template_directory_uri().'/css/custom.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('bootstrap');
+    wp_enqueue_style('custom');
+
+    //jQuery
+    wp_register_script('bootstrap', get_template_directory_uri().'/js/bootstrap.js', array(), '5.3.7', 'true');
+    wp_register_script('custom', get_template_directory_uri().'/js/custom.js', array(), '5.3.7', 'true');
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('bootstrap');
+    wp_enqueue_script('custom');
+ }
+ add_action('wp_enqueue_scripts', 'saiful_css_js_file_calling' );
+
+ // Google fonts link
+ function saiful_add_google_fonts(){
+   wp_enqueue_style('saiful_google_fonts', 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald:wght@200..700&family=Roboto:ital@0;1&display=swap', false);
+ }
+ add_action('wp_enqueue_scripts', 'saiful_add_google_fonts');
+
